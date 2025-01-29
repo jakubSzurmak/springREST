@@ -1,0 +1,30 @@
+<article class="text--justified">
+  <header><h2>List of Runners</h2></header>
+
+  <table *ngIf="runners">
+    <thead>
+    <tr>
+      <th>Id : Name</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let runner of runners.runners">
+      <td>{{runner.id + " : " + runner.name}}</td>
+      <td>
+        <button [routerLink]="['/runners', runner.id]">View</button>
+      </td>
+      <td>
+        <button [routerLink]="['/runners', runner.id, 'edit']">Edit</button>
+      </td>
+      <td>
+        <button (click)="onDelete(runner)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button [routerLink]="['/newRunner']">Add new runner</button>
+</article>
+
