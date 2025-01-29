@@ -1,0 +1,23 @@
+<article>
+  <header><h2>Add Shoe</h2></header>
+  <form class="container" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <th><label for="brandName">Brand name: </label></th>
+        <th><label for="model">Model: </label></th>
+        <th><label for="color">Color: </label></th>
+        <th><label for="size">Size: </label></th>
+      </tr>
+      <tr>
+        <td><input id="brandName" name="brandName" [(ngModel)]="shoe.brandName"/></td>
+        <td><input id="model" name="model" [(ngModel)]="shoe.model"/></td>
+        <td><input id="color" name="color" [(ngModel)]="shoe.color"/></td>
+        <td><input id="size" name="size" [(ngModel)]="shoe.size"/></td>
+      </tr>
+      <tr>
+        <td><button type="submit">Create</button></td>
+        <td><button type="reset">Reset</button></td>
+      </tr>
+    </table>
+  </form>
+</article>

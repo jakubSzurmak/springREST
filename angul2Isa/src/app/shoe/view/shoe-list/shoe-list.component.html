@@ -1,0 +1,22 @@
+<article class="text--justified">
+  <header><h2>Shoes</h2></header>
+
+  <table *ngIf="shoes">
+    <thead>
+    <tr>
+      <th>Login</th>
+      <th>View</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let shoe of shoes.shoes">
+      <td>{{shoe.id}}</td>
+      <td><button [routerLink]="['/shoes', shoe.id]">View</button></td>
+      <td>
+        <button (click)="onDelete(shoe)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</article>

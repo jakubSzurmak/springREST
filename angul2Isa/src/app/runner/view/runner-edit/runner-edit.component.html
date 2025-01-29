@@ -1,0 +1,36 @@
+<article *ngIf="runner">
+  <header><h2>Edit Runner</h2></header>
+
+  <table>
+    <form class="container"  #form="ngForm" (ngSubmit)="onSubmit()">
+    <tr>
+      <th>Name: </th>
+      <th>Surame: </th>
+      <th>Date of Birth: </th>
+      <th>Submit: </th>
+      <th>Reset: </th>
+    </tr>
+    <tr>
+      <td>
+        <label for="name">Name:</label>
+        <input id="name" name="name" [(ngModel)]="runner.name"/>
+      </td>
+      <td>
+        <label for="surname">Surname:</label>
+        <input id="surname" name="surname" [(ngModel)]="runner.surname"/>
+      </td>
+      <td>
+        <label for="birthDate">Date of birth:</label>
+        <textarea id="birthDate" name="birthDate" [(ngModel)]="runner.birthDate"></textarea>
+      </td>
+      <td>
+        <button type="submit">Update</button>
+      </td>
+      <td>
+        <button type="button" (click)="form.resetForm(original)">Reset</button>
+      </td>
+    </tr>
+    </form>
+  </table>
+</article>
+
