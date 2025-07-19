@@ -1,4 +1,4 @@
-# 🏃‍♂️ simpleSpringREST
+# 🏃‍♂️ springREST
 
 This project marks the beginning of my journey into **Java**, **Spring Boot**, and the **microservices architecture**. 
 It is a hands-on, end-to-end application designed to store and manage data about **Runners** (Categories) and their **Shoes** (Elements).
